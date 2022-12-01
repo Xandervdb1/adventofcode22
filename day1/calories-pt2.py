@@ -1,5 +1,4 @@
-datafile = open(r"C:\Users\xande\Dropbox\PC\Desktop\adventofcode22\day1\data.txt","r")
-data = datafile.readlines()
+data = open(r"C:\Users\xande\Dropbox\PC\Desktop\adventofcode22\day1\data.txt","r").readlines()
 sepList = []
 tempElf = []
 calories = []
@@ -7,8 +6,7 @@ topThree = []
 for x in data:
     if x != "\n": #not a new tempElf
         if x.endswith("\n"): #check if not last value
-            numberStr = x[:len(x)-1] #cut off "\n"
-            number = int(numberStr) #change string to number
+            number = int(x.strip()) #change string to number, cut off "\n"
         else:
             number = int(x) #last value, so no cutting off
         tempElf.append(number) #use temp list to store current elf
