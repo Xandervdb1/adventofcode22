@@ -5,7 +5,7 @@ opponent = ""
 choice = ""
 scoreList = []
 def checkWin():
-    if (opponent == "rock" and choice == "rock") or (opponent == "paper" and choice == "paper") or (opponent == "scissors" and choice == "scissors"):
+    if (opponent == choice):
         score = 3
         return score
     elif (opponent == "rock" and choice == "paper") or (opponent == "paper" and choice == "scissors") or (opponent == "scissors" and choice == "rock"):
