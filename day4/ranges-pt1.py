@@ -3,7 +3,6 @@ rangesList = []
 pairsList = []
 tempPair = []
 score = 0
-solutions = []
 for x in data:
     ranges = x.strip().split(",")
     for y in ranges:
@@ -12,10 +11,6 @@ for x in data:
 for x in range(0, len(rangesList), 2):
     pairsList.append(rangesList[x:x+2])
 for x in pairsList:
-    if ((x[0][0] >= x[1][0] and x[0][1] <= x[1][1]) or (x[0][0] <= x[1][0] and x[0][1] >= x[1][1])):
-        solutions.append(True)
+    if (((int(x[0][0]) >= int(x[1][0])) and (int(x[0][1]) <= int(x[1][1]))) or ((int(x[0][0]) <= int(x[1][0])) and (int(x[0][1]) >= int(x[1][1])))):
         score += 1
-    else:
-        solutions.append(False)
-print(solutions)
 print(score)
