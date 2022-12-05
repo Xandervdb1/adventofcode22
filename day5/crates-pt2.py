@@ -30,9 +30,9 @@ for x in divRow:
             divRow[i].remove("   \n")
 def moveBoxes(fromRow, toRow, amount):
     target = fromRow[0:int(amount)]
-    for i in range(0, len(target)):
+    for i in range(int(amount)-1, -1, -1):
         toRow.insert(0, target[i])
-        fromRow.pop(0)
+        fromRow.pop(i)
 for x in data:
     if x.startswith("move"):
         x = [int(s) for s in x.split() if s.isdigit()]
