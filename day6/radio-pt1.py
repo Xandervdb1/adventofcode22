@@ -1,7 +1,7 @@
 data = open(r"C:\Users\xande\Dropbox\PC\Desktop\adventofcode22\day6\data.txt","r").readlines()
 uniqueCharacters = 4
 score = uniqueCharacters
-def grabFourFirst():
+def grabFirst():
     firstFour = []
     for i in range(0,uniqueCharacters):
         firstFour.append(data[0][i])
@@ -14,7 +14,7 @@ def moveLetter():
     checkList.append(data[0][0])
     checkList.pop(0)
     data[0] = data[0][1:]
-checkList = grabFourFirst()
+checkList = grabFirst()
 if checkUnique(checkList):
     print(score)
 else:
